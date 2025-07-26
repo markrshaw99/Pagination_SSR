@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Congratulations on your Paginations!</title>
+  <link rel="stylesheet" href="pagination.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Example</h1>
+  
+  <div id="pagination"><nav class="pagination"><ul class="baby_pagination"><li class="arrow"><span class="arrow-text">&lt;</span></li>Page 10 of 30<li class="arrow"><span class="arrow-text">&gt;</span></li></ul><ul class="pagination__list zIs5"><li class="arrow"><span class="arrow-text">&lt;</span></li><li class="pagination__item">1</li><li class="pagination__ellipsis">...</li><li class="pagination__item current_page">10</li><li class="pagination__ellipsis">...</li><li class="pagination__item">30</li><li class="arrow"><span class="arrow-text">&gt;</span></li></ul><ul class="pagination__list zIs7"><li class="arrow"><span class="arrow-text">&lt;</span></li><li class="pagination__item">1</li><li class="pagination__ellipsis">...</li><li class="pagination__item">9</li><li class="pagination__item current_page">10</li><li class="pagination__item">11</li><li class="pagination__ellipsis">...</li><li class="pagination__item">30</li><li class="arrow"><span class="arrow-text">&gt;</span></li></ul><ul class="pagination__list zIs9"><li class="arrow"><span class="arrow-text">&lt;</span></li><li class="pagination__item">1</li><li class="pagination__ellipsis">...</li><li class="pagination__item">8</li><li class="pagination__item">9</li><li class="pagination__item current_page">10</li><li class="pagination__item">11</li><li class="pagination__item">12</li><li class="pagination__ellipsis">...</li><li class="pagination__item">30</li><li class="arrow"><span class="arrow-text">&gt;</span></li></ul></nav></div>
+  <div class="gap">
+    <br>
+    <br>
+    <br>
+    <hr>
+    <p class="pagination__info">Display Size</p>
+  </div>
+  <div class="size-info">
+    <p class="size-min"> ≥ 0</p>
+    <p class="size-375"> ≥ 375</p>
+    <p class="size-480"> ≥ 480</p>
+    <p class="size-536"> ≥ 536</p>
+  </div>
+  <hr class ="gap">
+<div class="pagination__info">
+    <p> This is an example of a pagination component that works without the requirement of JavaScript. All the logic is rendered server side, and relies entirely on CSS for responsiveness.</p>
+    <hr class="gap">
+    <p>Create your own X of Y pagination panel by downloading the repo and running in terminal:
+      <br>
+      <hr class="gap">
+      node build.js &lt;current page&gt; &lt;total pages&gt;
+      <hr class="gap">
+      <br>
+      <br>
+  </div>
+</body>
+
+</html>
