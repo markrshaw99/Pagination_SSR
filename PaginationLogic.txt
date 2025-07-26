@@ -1,0 +1,57 @@
+Pagination Requirements and Logic
+
+Definitions:
+
+Page Number = x
+Final Page = y
+
+General Case:
+
+For <375px width:		< Page x of y >
+
+For >=375px width: 5 items	< 1 ... X ... y >
+
+For >=480px width: 7 items	< 1 ... x-1 X x+1 ... y >
+
+For >=536px width: 9 items	< 1 ... x-2 x-1 X x+1 x+2 ... y >
+
+
+Exceptions:
+
+For <375px width:  No Exceptions								< Page x of y >
+
+For >375px width:  2 Exceptions @ x=3 and x=(y-2) = 	No elipsis at 2 & No elipsis at (y-1)	< 1, 2, X=3, x+1, y >				< 1, 2, X=y-2, y-1, y >
+
+For >480px width:  2 Exceptions @ x=4 and x=(y-3)     = No elipsis at 2 & No elipsis at (y-1)	< 1, 2, x-1, X=4, x+1, ... y >			< 1, ..., x-1, X = y-3, y-2, y-1, y >
+
+For >536px width:  2 Exceptions	@ x=5 and x=(y-4)     = No elipsis at 2 & No elipsis at (y-1)	< 1, x-3, x-2, x-1, X=5, x+1, x+2, ..., y >	< 1, ... , x-2, x-1, X=y-4, y-3, y-2, y-1, y >
+
+
+
+Spacing and position:
+
+Definitions and Dimensions:
+
+Items number = Z
+Component Width = C
+Page Width = W
+Variable Spae = Var
+
+Number = 40px
+Space = 4px
+Arrow = 40px
+VAR =< 56px
+
+													   1	       ...	      4            5              6               ...              20
+General:						Where Z= 7	Margin OuterSpace Arrow Var      Number Space Number Space Number Space Number	Space	Number	Space	Number	Space	 Number	 Var	Arrow	OuterSpace
+
+Total width of component, C (px) = (Z+2)*40 + (Z-1)*4 + (2*VAR) 		C = 44Z + 2Var + 76
+
+Allowing 2*16 px margins:
+
+Making Spaces between Arrows & Margin also Var: Outer Spaces = 2*Var
+
+Width of component + margins + Outer Spaces = 44Z + 4Var + 108
+
+Therefore at width, W: 		Var = (W - 44Z - 108)/4			Eg. @ W = 500px, Z=7 	so	 Var = (500 - 44(7) -108)/4 = 21px	C = (9*40) + (6)*4 + (2*21) = 426	C + Margins + Outer space = 426 + 32 + 42 = 500
+
