@@ -25,7 +25,7 @@ if (args.length >= 2) {
 
 const paginationHTML = paginateThisBitch(currentPage, totalPages);
 const templatePath = path.join(__dirname, 'index.template.html');
-const outputPath = path.join(__dirname, 'index.html');
+const outputPath = path.join(__dirname, 'pagination.html');
 const template = fs.readFileSync(templatePath, 'utf8');
 const output = template.replace('PutItInHereDaddy', paginationHTML);
 
