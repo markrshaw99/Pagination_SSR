@@ -30,5 +30,6 @@ node build.js 2 10
 - `build.js` - Main script for generating paginated HTML
 - `index.template.html` - HTML template used by the build script
 - `pagination.css` - Styles for pagination
+- `paginationLogic.txt` - Explanation of self-imposed design requirements and exploration of logic
 ---
 Created by [markrshaw99](https://github.com/markrshaw99)
